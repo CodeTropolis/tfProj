@@ -1,3 +1,4 @@
+// Run using live-server
 
 async function loadModel() {
   const model = await tf.loadLayersModel('https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json');
@@ -18,6 +19,7 @@ async function predict() {
 
   // Get the top-1 prediction and display the result.
   const topPrediction = prediction.as1D().argMax().dataSync()[0];
+  console.log(prediction)
   document.getElementById('prediction').innerText = `Prediction: ${topPrediction}`;
 
   // Dispose tensors.
