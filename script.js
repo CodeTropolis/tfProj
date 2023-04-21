@@ -1,4 +1,5 @@
 // Run using live-server
+// https://stackoverflow.com/a/75418790
 
 async function loadModel() {
   const model = await tf.loadLayersModel('https://storage.googleapis.com/tfjs-models/tfjs/mobilenet_v1_0.25_224/model.json');
